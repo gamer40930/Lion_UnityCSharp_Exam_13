@@ -28,7 +28,7 @@ public class Exam_01 : MonoBehaviour
         #region 換題
         if (Input.GetKeyDown(KeyCode.O))
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(4);
         }
 
         if (Input.GetKeyDown(KeyCode.P))

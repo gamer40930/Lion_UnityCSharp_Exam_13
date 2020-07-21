@@ -38,9 +38,9 @@ public class Exam_03 : MonoBehaviour
 
     public void Draw()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++) // 0 1 2 3 4 
         {
-            for (int j = 0; j < (i + 1); j++)
+            for (int j = 0; j < (i + 1); j++)  // 0 1 2 3 4  
             {
 
                 Vector3 pos = new Vector3(i * 1, j * 1, 25);
@@ -49,34 +49,35 @@ public class Exam_03 : MonoBehaviour
 
 
             }
-            for (int k = 0; k < (i + 1); k++)
+            for (int k = 0; k < (i + 1); k++) 
             {
 
-                Vector3 pos = new Vector3(i * 1, -k * 1, 25);
+                Vector3 pos = new Vector3(i * 1, -k * 1, 25); 
 
                 Instantiate(cube, pos, Quaternion.identity);
             }
 
 
-            for (int j = 0; j < (i + 1); j++)
-            {
-
-                Vector3 pos = new Vector3(-i * 1, -j * 1, 25);
-
-                Instantiate(cube, pos, Quaternion.identity);
-
-
-            }
-
             for (int k = 0; k < (i + 1); k++)
             {
 
-                Vector3 pos = new Vector3(-i * 1, k * 1, 25);
+                Vector3 pos = new Vector3((i * -1)+6, k *1, 25);
 
                 Instantiate(cube, pos, Quaternion.identity);
+            }
+
+            for (int j = 0; j < (i + 1); j++)  // 0 1 2 3 4  
+            {
+
+                Vector3 pos = new Vector3((i * -1)+6, j * -1, 25);
+
+                Instantiate(cube, pos, Quaternion.identity);
+
+
             }
 
         }
+        
     }
 
     
